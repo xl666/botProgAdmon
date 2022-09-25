@@ -1,0 +1,54 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hola
+    - hi
+    - buenas
+    - buenos días
+    - buenas tardes
+    - buenas noches
+    - que tal
+    - que pex
+
+- intent: goodbye
+  examples: |
+    - adios
+    - bye
+    - me voy
+    - hasta luego
+    - hasta nunca
+    - nos vemos
+
+- intent: bot_challenge
+  examples: |
+    - eres un bot?
+    - eres humano?
+    - estoy hablando con un bot?
+    - estoy hablando con un humano?
+
+- intent: if_bloque
+  examples: |
+    - como se pone un if de bloque
+    - if
+    - código de if de bloque
+    - como es el if?
+
+- intent: temario
+  examples: |
+    - temario
+    - qué sabes hacer?
+    - que sabes?
+    - temas
+
+- intent: hash_bang
+  examples: |
+    - hash bang
+    - como se pone el hash bang
+    - comentario inicial
+    - que se pone al inicio del archivo
+    - como se inicia un script
+    - inicio script
+    - inicio archivo

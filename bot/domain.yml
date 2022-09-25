@@ -1,0 +1,59 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - bot_challenge
+  - temario
+  - if_bloque
+  - hash_bang
+
+responses:
+  utter_greet:
+  - text: "Hola qué tal"
+  - text: "Hola"
+  - text: "Buen día"
+  - text: "Buenas"
+
+
+  utter_goodbye:
+  - text: "Bye"
+  - text: "Adios"
+  - text: "Nos vemos"
+  - text: "Cuídate"
+  - text: "Hasta la próxima"
+  - text: "Ciao"
+
+  utter_iamabot:
+  - text: "Soy un bot, pero también tengo sentimientos"
+  - text: "No soy humano, soy un bot"
+
+  utter_temario:
+  - text: >
+      Estos son los temas con los que te puedo ayudar:<br />
+       - Comentario especial hash bang
+       - If de bloque<br/>
+       
+  utter_if_bloque_ayuda:
+  - text: >
+      Recuerda que se puede poner cualquier comando en la condición,<br/>
+      lo que importa es el código de retorno del comando
+
+  utter_if_bloque_codigo:
+  - text: "code:bash:bash/if_bloque.sh"
+
+  utter_hash_bang_ayuda:
+  - text: >
+      Este comentario debe ir en la primera línea del script<br />
+      No debe haber espacios antes de ponerlo<br />
+      Le indica al sistema el intérprete que se desea usar<br />
+      Sirve para cualquier lenguaje interpretado, no sólo bash
+
+  utter_hash_bang_codigo:
+  - text: "code:bash:bash/hash_bang.sh"
+        
+      
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
