@@ -7,6 +7,9 @@ intents:
   - temario
   - if_bloque
   - hash_bang
+  - if_linea
+  - encadenamiento
+  - codigos_retorno
 
 responses:
   utter_greet:
@@ -28,31 +31,63 @@ responses:
   - text: "Soy un bot, pero también tengo sentimientos"
   - text: "No soy humano, soy un bot"
 
-  utter_temario:
-  - text: >
-      Estos son los temas con los que te puedo ayudar:<br />
-       - Comentario especial hash bang
-       - If de bloque<br/>
        
   utter_if_bloque_ayuda:
   - text: >
-      Recuerda que se puede poner cualquier comando en la condición,<br/>
-      lo que importa es el código de retorno del comando
+      - Recuerda que se puede poner cualquier comando en la condición,<br/>
+        lo que importa es el código de retorno del comando
 
   utter_if_bloque_codigo:
   - text: "code:bash:bash/if_bloque.sh"
 
+  utter_if_linea_ayuda:
+  - text: >
+      - Técnicamente no es un if, más bien una forma de encadenamiento<br />
+      - El comando_condicion es cualquier comando, se evalúa código de retorno<br />
+      - Si quieres saber más consulta el tema de encadenamiento
+
+  utter_if_linea_codigo:
+  - text: "code:bash:bash/if_linea.sh"    
+
   utter_hash_bang_ayuda:
   - text: >
-      Este comentario debe ir en la primera línea del script<br />
-      No debe haber espacios antes de ponerlo<br />
-      Le indica al sistema el intérprete que se desea usar<br />
-      Sirve para cualquier lenguaje interpretado, no sólo bash
+      - Este comentario debe ir en la primera línea del script<br />
+      - No debe haber espacios antes de ponerlo<br />
+      - Le indica al sistema el intérprete que se desea usar<br />
+      - Sirve para cualquier lenguaje interpretado, no sólo bash
 
   utter_hash_bang_codigo:
   - text: "code:bash:bash/hash_bang.sh"
-        
+
+  utter_encadenamiento_ayuda:
+  - text: >
+      - Sirve para ejecutar varios comandos seguidos<br />
+      - Con ; siempre se ejecutan todos<br />
+      - con && y || se ejecutan de acuerdo a valor de verdad
+
+  utter_encadenamiento_complemento:
+  - text: "Si quieres saber más revisa el tema de códigos de retorno"
+
+  utter_encadenamiento_codigo:
+  - text: "code:bash:bash/encadenamiento.sh"
+    
+  utter_codigos_retorno_ayuda:
+  - text: >
+      - Al terminar, todos los procesos le regresan un número al SO<br/>
+      - Básicamente 0 es verdadero y cualquier otro número es falso
+
+  utter_codigos_retorno_codigo:
+  - text: "code:bash:bash/codigos_retorno.sh"
       
+  utter_temario:
+  - text: >
+      Estos son los temas con los que te puedo ayudar:<br />
+       - Códigos de retorno (verdad y falsedad)<br />
+       - Comentario especial hash bang<br />
+       - Encadenamiento<br />
+       - If de bloque<br />
+       - If de línea<br />
+    
 
 session_config:
   session_expiration_time: 60

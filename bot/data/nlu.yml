@@ -33,6 +33,7 @@ nlu:
   examples: |
     - como se pone un if de bloque
     - if
+    - if normal
     - código de if de bloque
     - como es el if?
 
@@ -52,3 +53,26 @@ nlu:
     - como se inicia un script
     - inicio script
     - inicio archivo
+
+- intent: if_linea
+  examples: |
+    - if de linea
+    - if inline
+    - como es un if de linea?
+    - cómo es un if inline
+
+- intent: encadenamiento
+  examples: |
+    - encadenamiento
+    - qué es el encadenamiento
+    - como es el encadenamiento
+    - poner comandos seguidos
+    - conectar comandos
+
+- intent: codigos_retorno
+  examples: |
+    - códigos de retorno
+    - código de retorno anterior
+    - ver retorno anterior
+    - verdad y falsedad
+    - verdadero o falso

@@ -2,33 +2,22 @@ version: "2.0"
 
 stories:
 
-- story: happy path
+- story: saludar
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: mood_great
-  - action: utter_happy
 
-- story: sad path 1
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: affirm
-  - action: utter_happy
 
-- story: sad path 2
+- story: despedirse
   steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: deny
+  - intent: goodbye
   - action: utter_goodbye
 
+- story: temario
+  steps:
+  - intent: temario
+  - action: utter_temario
+    
 - story: if bloque
   steps:
   - intent: if_bloque
@@ -40,3 +29,22 @@ stories:
     - intent: hash_bang
     - action: utter_hash_bang_codigo
     - action: utter_hash_bang_ayuda
+
+- story: if linea
+  steps:
+    - intent: if_linea
+    - action: utter_if_linea_codigo
+    - action: utter_if_linea_ayuda
+
+- story: encadenamiento
+  steps:
+    - intent: encadenamiento
+    - action: utter_encadenamiento_ayuda
+    - action: utter_encadenamiento_codigo
+    - action: utter_encadenamiento_complemento
+      
+- story: encadenamiento
+  steps:
+    - intent: codigos_retorno
+    - action: utter_codigos_retorno_ayuda
+    - action: utter_codigos_retorno_codigo
