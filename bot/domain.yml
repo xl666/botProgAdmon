@@ -3,6 +3,7 @@ version: "3.1"
 intents:
   - greet
   - goodbye
+  - ejemplo
   - bot_challenge
   - temario
   - if_bloque
@@ -10,6 +11,7 @@ intents:
   - if_linea
   - encadenamiento
   - codigos_retorno
+  - for
 
 responses:
   utter_greet:
@@ -31,6 +33,8 @@ responses:
   - text: "Soy un bot, pero también tengo sentimientos"
   - text: "No soy humano, soy un bot"
 
+  utter_sin_ejemplos:
+  - text: "No tengo ejemplos para este tema, pide a tu maestro que agregue"
        
   utter_if_bloque_ayuda:
   - text: >
@@ -70,6 +74,9 @@ responses:
 
   utter_encadenamiento_codigo:
   - text: "code:bash:bash/encadenamiento.sh"
+
+  utter_encadenamiento_ejemplo_codigo:
+  - text: "code:bash:bash/encadenamiento_ejemplo.sh"
     
   utter_codigos_retorno_ayuda:
   - text: >
@@ -78,6 +85,21 @@ responses:
 
   utter_codigos_retorno_codigo:
   - text: "code:bash:bash/codigos_retorno.sh"
+
+  utter_for_ayuda:
+  - text: >
+      - Se comporta como un for each (como el de python)<br />
+      - Cuidado, se itera sobre una cadena<br />
+      - Cada elemento en la cadena es separado por algún separador<br />
+      - Por ejemplo, los espacios y saltos de línea son separadores<br />
+      - Los caracteres separadores están definidos en la variable IFS<br />
+      - Si editas IFS puedes cambiar el comportamiento de for     
+
+  utter_for_codigo:
+  - text: "code:bash:bash/for.sh"
+
+  utter_for_ejemplo_codigo:
+  - text: "code:bash:bash/for_ejemplo.sh"
       
   utter_temario:
   - text: >
@@ -85,6 +107,7 @@ responses:
        - Códigos de retorno (verdad y falsedad)<br />
        - Comentario especial hash bang<br />
        - Encadenamiento<br />
+       - Ciclo for<br />
        - If de bloque<br />
        - If de línea<br />
     

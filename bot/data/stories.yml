@@ -13,6 +13,11 @@ stories:
   - intent: goodbye
   - action: utter_goodbye
 
+- story: sin_ejemplos
+  steps:
+  - intent: ejemplo
+  - action: utter_sin_ejemplos
+    
 - story: temario
   steps:
   - intent: temario
@@ -42,9 +47,19 @@ stories:
     - action: utter_encadenamiento_ayuda
     - action: utter_encadenamiento_codigo
     - action: utter_encadenamiento_complemento
+    - intent: ejemplo
+    - action: utter_encadenamiento_ejemplo_codigo
       
-- story: encadenamiento
+- story: codigos retorno
   steps:
     - intent: codigos_retorno
     - action: utter_codigos_retorno_ayuda
     - action: utter_codigos_retorno_codigo
+
+- story: for
+  steps:
+    - intent: for
+    - action: utter_for_codigo
+    - action: utter_for_ayuda
+    - intent: ejemplo
+    - action: utter_for_ejemplo_codigo

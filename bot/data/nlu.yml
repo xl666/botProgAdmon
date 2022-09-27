@@ -76,3 +76,20 @@ nlu:
     - ver retorno anterior
     - verdad y falsedad
     - verdadero o falso
+
+- intent: for
+  examples: |
+    - for
+    - ciclo for
+    - como es el for?
+    - código for
+    - dime el for
+    - dame el for
+
+- intent: ejemplo
+  examples: |    
+    - ejemplo
+    - dame un ejemplo
+    - por ejemplo
+    - quiero un ejemplo
+    - ejemplifica
