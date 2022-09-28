@@ -77,7 +77,7 @@ stories:
     - intent: redireccion_flujo
     - action: utter_redireccion_flujo_ayuda
     - intent: ejemplo
-    - intent: utter_redireccion_flujo_ejemplo_codigo
+    - action: utter_redireccion_flujo_ejemplo_codigo
 
 - story: variables
   steps:
@@ -91,7 +91,7 @@ stories:
     - action: utter_bloques_codigo
     - action: utter_bloques_ayuda
     - intent: ejemplo
-    - intent: utter_bloques_ejemplo_codigo
+    - action: utter_bloques_ejemplo_codigo
 
 - story: quoting
   steps:

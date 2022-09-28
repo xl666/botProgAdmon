@@ -145,9 +145,9 @@ responses:
 
   utter_bloques_ayuda:
   - text: >
-      - Sirven para hacer más de una cosa, agrupando comandos
-      - Hay contextos donde se espera sólo un comando pero se quieren varios
-      - Dentro del bloque los comandos van encadenados
+      - Sirven para hacer más de una cosa, agrupando comandos<br />
+      - Hay contextos donde se espera sólo un comando pero se quieren varios<br />
+      - Dentro del bloque los comandos van encadenados<br />
       - Hay que tener mucho cuidado con los espacios y los ;
 
   utter_bloques_codigo:
@@ -156,7 +156,7 @@ responses:
   utter_bloques_ejemplo_codigo:
   - text: "code:bash:bash/bloques_ejemplo.sh"    
 
-    utter_quoting_ayuda:
+  utter_quoting_ayuda:
   - text: >
       - Se refiere a poner cosas entre comillas<br />
       - Las comillas pueden ser dobles o simples<br />
