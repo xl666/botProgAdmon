@@ -63,3 +63,39 @@ stories:
     - action: utter_for_ayuda
     - intent: ejemplo
     - action: utter_for_ejemplo_codigo
+
+- story: while
+  steps:
+    - intent: while
+    - action: utter_while_ayuda
+    - action: utter_while_codigo
+    - intent: ejemplo
+    - action: utter_while_ejemplo_codigo
+
+- story: redireccion_flujo
+  steps:
+    - intent: redireccion_flujo
+    - action: utter_redireccion_flujo_ayuda
+    - intent: ejemplo
+    - intent: utter_redireccion_flujo_ejemplo_codigo
+
+- story: variables
+  steps:
+    - intent: variables
+    - action: utter_variables_codigo
+    - action: utter_variables_ayuda
+
+- story: bloques
+  steps:
+    - intent: bloques
+    - action: utter_bloques_codigo
+    - action: utter_bloques_ayuda
+    - intent: ejemplo
+    - intent: utter_bloques_ejemplo_codigo
+
+- story: quoting
+  steps:
+    - intent: quoting
+    - action: utter_quoting_ayuda
+    - intent: ejemplo
+    - action: utter_quoting_ejemplo_codigo

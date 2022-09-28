@@ -93,3 +93,47 @@ nlu:
     - por ejemplo
     - quiero un ejemplo
     - ejemplifica
+
+- intent: while
+  examples: |
+    - while
+    - ciclo while
+    - como es el while?
+    - código while
+    - dime el while
+    - dame el while   
+
+- intent: redireccion_flujo
+  examples: |
+    - redirección de flujo
+    - pipes
+    - tuberias
+    - como mandar salida a un archivo
+    - salida estandar
+    - entrada estandar
+    - salida de error
+
+- intent: variables
+  examples: |
+    - variables
+    - como definir variables
+    - como pongo variables
+    - valor de variable
+    - cómo recupero valor de variable
+
+- intent: bloques
+  examples: |
+    - bloques
+    - cómo uso las llaves
+    - como agrupo comandos
+    - como defino bloques
+    - que son los bloques
+
+- intent: quoting
+  examples: |
+    - quoting
+    - como usar comilla
+    - comillas
+    - doble comilla
+    - agrupar cadenas
+    - manejar espacios

@@ -1,5 +1,5 @@
 (undo-tree-save-format-version . 1)
-"2bb453a8561b93c9796c1893d7bc7c9a89d16c15"
+"d79ec6abd5f3b47a058a7f41ce96c3af6c6912a5"
 [nil nil nil nil (25391 53644 913670 477000) 0 nil]
 ([nil nil ((543 . 548) (t 24948 34604 0 0)) nil (25391 53644 913666 706000) 0 nil])
 ([nil nil ((#(" " 0 1 (fontified t)) . -547) (undo-tree-id21 . -1) 548) nil (25391 53644 913664 402000) 0 nil])

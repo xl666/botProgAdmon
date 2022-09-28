@@ -12,6 +12,11 @@ intents:
   - encadenamiento
   - codigos_retorno
   - for
+  - while
+  - redireccion_flujo
+  - variables
+  - bloques
+  - quoting
 
 responses:
   utter_greet:
@@ -100,17 +105,88 @@ responses:
 
   utter_for_ejemplo_codigo:
   - text: "code:bash:bash/for_ejemplo.sh"
+
+  utter_while_ayuda:
+  - text: >
+      - Básicamente igual que en cualquier lenguaje
+      - En la condición lo que importa es el código de retorno del comando
+
+  utter_while_codigo:
+  - text: "code:bash:bash/while.sh"
+
+  utter_while_ejemplo_codigo:
+  - text: "code:bash:bash/while_ejemplo.sh"
+
+  utter_redireccion_flujo_ayuda:
+  - text: >
+      - > Redirige salida estándar<br />
+      - >> Redirige salida agregando al final<br />
+      - < Redirige entrada<br />
+      - 2> Redirige salida de error<br />
+      - 2>> Redirige salida de error agregando al final<br />
+      - &> Redirige salida y salida de error<br />
+      - &>> Redirige salida y salida de error al final<br />
+      - | Conecta salida y entrada de dos comandos<br />
+        
+  utter_redireccion_flujo_ejemplo_codigo:
+  - text: "code:bash:bash/redireccion_ejemplo.sh"            
+  utter_variables_ayuda:
+  - text: >
+      - No puedes dejar espacios en la declaración<br />
+      - En bash no hay tipos de datos<br />
+      - Todas las variables son cadenas<br />
+      - Si una variable no existe su valor es cadena vacía<br />
+      - Para recuperar el valor de una variable anteponer $<br />
+      - CUIDADO la doble comilla no es para crear cadenas<br />
+      - Para más información revisa el tema de quoting
+
+  utter_variables_codigo:
+  - text: "code:bash:bash/variables.sh"      
+
+  utter_bloques_ayuda:
+  - text: >
+      - Sirven para hacer más de una cosa, agrupando comandos
+      - Hay contextos donde se espera sólo un comando pero se quieren varios
+      - Dentro del bloque los comandos van encadenados
+      - Hay que tener mucho cuidado con los espacios y los ;
+
+  utter_bloques_codigo:
+  - text: "code:bash:bash/bloques.sh"
+
+  utter_bloques_ejemplo_codigo:
+  - text: "code:bash:bash/bloques_ejemplo.sh"    
+
+    utter_quoting_ayuda:
+  - text: >
+      - Se refiere a poner cosas entre comillas<br />
+      - Las comillas pueden ser dobles o simples<br />
+      - Es una forma de lidiar con los espacios<br/> 
+      - Para bash los espacios pueden significar parámetros
+      - Lo que esté entre comillas, aunque tenga espacios,<br />
+        se considera como una sola cosa<br/>
+      - La comilla doble expande valores<br/>
+      - La comilla simple no expande valores<br/>
+      - Siempre pon tus variables y parámetros entre doble comilla
+
+  utter_quoting_ejemplo_codigo:
+  - text: "code:bash:bash/quoting_ejemplo.sh"
       
   utter_temario:
   - text: >
       Estos son los temas con los que te puedo ayudar:<br />
+       - Bloques<br />
        - Códigos de retorno (verdad y falsedad)<br />
        - Comentario especial hash bang<br />
        - Encadenamiento<br />
        - Ciclo for<br />
+       - Ciclo while<br />
        - If de bloque<br />
        - If de línea<br />
-    
+       - Quoting<br />
+       - Redirección de flujo<br />
+       - Variables<br />
+       
+       
 
 session_config:
   session_expiration_time: 60
