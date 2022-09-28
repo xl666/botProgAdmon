@@ -137,3 +137,18 @@ nlu:
     - doble comilla
     - agrupar cadenas
     - manejar espacios
+
+- intent: comandos_testing
+  examples: |
+    - comandos de testing
+    - como poner condiciones
+    - condicionales
+    - tipos de condiciones
+    - mayor que
+    - menor que
+    - igual que
+    - es un directorio
+    - es una carpeta
+    - es un archivo
+    - modificadores testing
+    - modificadores condicionales

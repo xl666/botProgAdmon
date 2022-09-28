@@ -17,6 +17,7 @@ intents:
   - variables
   - bloques
   - quoting
+  - comandos_testing
 
 responses:
   utter_greet:
@@ -108,7 +109,7 @@ responses:
 
   utter_while_ayuda:
   - text: >
-      - Básicamente igual que en cualquier lenguaje
+      - Básicamente igual que en cualquier lenguaje<br />
       - En la condición lo que importa es el código de retorno del comando
 
   utter_while_codigo:
@@ -170,6 +171,21 @@ responses:
 
   utter_quoting_ejemplo_codigo:
   - text: "code:bash:bash/quoting_ejemplo.sh"
+
+  utter_comandos_testing_ayuda1:
+  - text: >
+      - Son comandos para hacer evaluaciones booleanas<br />
+      - Al igual que otros comandos regresan un código de retorno<br />
+      - NO son parte sintáctica de un if o un while<br />
+      - Son 3 comandos de este tipo: test, [], [[]]<br />
+      - test y [] son el mismo comando<br />
+      - [[]] hace lo mismo que test pero tiene más opciones
+
+  utter_comandos_testing_codigo:
+  - text: "code:bash:bash/comandos_testing.sh"
+
+  utter_comandos_testing_ejemplo_codigo:
+  - text: "code:bash:bash/comandos_testing_ejemplo.sh"    
       
   utter_temario:
   - text: >
@@ -180,6 +196,7 @@ responses:
        - Encadenamiento<br />
        - Ciclo for<br />
        - Ciclo while<br />
+       - Comandos de testing<br />
        - If de bloque<br />
        - If de línea<br />
        - Quoting<br />

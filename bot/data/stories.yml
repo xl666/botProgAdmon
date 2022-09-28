@@ -99,3 +99,11 @@ stories:
     - action: utter_quoting_ayuda
     - intent: ejemplo
     - action: utter_quoting_ejemplo_codigo
+
+- story: comandos_testing
+  steps:
+    - intent: comandos_testing
+    - action: utter_comandos_testing_ayuda1
+    - action: utter_comandos_testing_codigo
+    - intent: ejemplo
+    - action: utter_comandos_testing_ejemplo_codigo
