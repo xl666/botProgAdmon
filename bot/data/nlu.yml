@@ -152,3 +152,21 @@ nlu:
     - es un archivo
     - modificadores testing
     - modificadores condicionales
+
+- intent: funciones
+  examples: |
+    - funciones
+    - Como poner funciones
+    - valor de una función
+    - return
+    - hecer función
+    - definir función
+    - llamar función
+
+- intent: recorrer_dirs
+  examples: |    
+    - como puedo recorrer un directorio
+    - como hago un for para directorios
+    - iterar elementos de un directorio
+    - for para carpetas
+    - for para directorios

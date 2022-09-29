@@ -107,3 +107,17 @@ stories:
     - action: utter_comandos_testing_codigo
     - intent: ejemplo
     - action: utter_comandos_testing_ejemplo_codigo
+
+- story: funciones
+  steps:
+    - intent: funciones
+    - action: utter_funciones_codigo
+    - action: utter_funciones_ayuda
+    - intent: ejemplo
+    - action: utter_funciones_ejemplo_codigo
+
+- story: recorrer_dirs
+  steps:
+    - intent: recorrer_dirs
+    - action: utter_recorrer_dirs_codigo
+    - action: utter_recorrer_dirs_ayuda

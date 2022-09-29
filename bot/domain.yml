@@ -18,6 +18,8 @@ intents:
   - bloques
   - quoting
   - comandos_testing
+  - funciones
+  - recorrer_dirs
 
 responses:
   utter_greet:
@@ -186,8 +188,34 @@ responses:
 
   utter_comandos_testing_ejemplo_codigo:
   - text: "code:bash:bash/comandos_testing_ejemplo.sh"    
+
+  utter_funciones_ayuda:
+  - text: >
+      - Sirven para agrupar funcionalidad y descomponer problemas<br />
+      - Los parámetros que reciben son posicionales, como en un script<br />
+      - Si quieres regresar un valor usa echo (trata de que sea uno)<br />
+      - Con return se puede regresar un código de retorno<br />
+      - Las funciones se invocan como cualquier comando<br />
+      - Siempre que declares usa local para no definir en ámbito global
+  
+  utter_funciones_codigo:
+  - text: "code:bash:bash/funciones.sh"
+
+  utter_funciones_ejemplo_codigo:
+  - text: "code:bash:bash/funciones_ejemplo.sh"        
+
+  utter_recorrer_dirs_ayuda:
+  - text: >
+      - NUNCA uses ls para recorrer lo archivos de un directorio<br />
+      - ls no funciona bien si hay espacios en los nombres de archivos<br />
+      - Para este caso se debe usar globbing<br />
+      - Es importante que el globbing quede fuera comillas dobles<br />
+      - Si quieres saber más revisa el tema de globbing<br />
+
+  utter_recorrer_dirs_codigo:
+  - text: "code:bash:bash/recorrer_dirs.sh"
       
-  utter_temario:
+  uttero_temario:
   - text: >
       Estos son los temas con los que te puedo ayudar:<br />
        - Bloques<br />
@@ -197,9 +225,11 @@ responses:
        - Ciclo for<br />
        - Ciclo while<br />
        - Comandos de testing<br />
+       - Funciones<br />
        - If de bloque<br />
        - If de línea<br />
        - Quoting<br />
+       - Recorrer directorios<br />
        - Redirección de flujo<br />
        - Variables<br />
        
