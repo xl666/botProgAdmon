@@ -121,3 +121,55 @@ stories:
     - intent: recorrer_dirs
     - action: utter_recorrer_dirs_codigo
     - action: utter_recorrer_dirs_ayuda
+
+- story: funciones_rec
+  steps:
+    - intent: funciones_rec
+    - action: utter_funciones_rec_ayuda
+    - action: utter_funciones_rec_codigo
+    - intent: ejemplo
+    - action: utter_funciones_rec_ejemplo_codigo
+
+- story: globbing
+  steps:
+    - intent: globbing
+    - action: utter_globbing_ayuda1
+    - action: utter_globbing_ayuda2
+    - intent: ejemplo
+    - action: utter_globbing_ejemplo_codigo
+
+- story: expansion_comando
+  steps:
+    - intent: expansion_comando
+    - action: utter_expansion_comando_codigo
+    - action: utter_expansion_comando_ayuda
+    - intent: ejemplo
+    - action: utter_expansion_comando_ejemplo_codigo  
+
+- story: parametros
+  steps:
+    - intent: parametros
+    - action: utter_parametros_ayuda
+    - intent: ejemplo
+    - action: utter_parametros_ejemplo_codigo
+
+- story: parametros_especiales
+  steps:
+    - intent: parametros_especiales
+    - action: utter_parametros_especiales_ayuda
+    - intent: ejemplo
+    - action: utter_parametros_especiales_ejemplo_codigo
+
+- story: expansion_variables
+  steps:
+    - intent: expansion_variables
+    - action: utter_expansion_variables_ayuda1
+    - action: utter_expansion_variables_ayuda2
+    - intent: ejemplo
+    - action: utter_expansion_variables_ejemplo_codigo
+
+- story: getopts
+  steps:      
+    - intent: getopts
+    - action: utter_getopts_codigo
+    - action: utter_getopts_ayuda

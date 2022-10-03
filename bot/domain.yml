@@ -20,6 +20,13 @@ intents:
   - comandos_testing
   - funciones
   - recorrer_dirs
+  - funciones_rec
+  - globbing
+  - expansion_comando
+  - parametros
+  - parametros_especiales
+  - expansion_variables
+  - getopts
 
 responses:
   utter_greet:
@@ -209,25 +216,146 @@ responses:
       - NUNCA uses ls para recorrer lo archivos de un directorio<br />
       - ls no funciona bien si hay espacios en los nombres de archivos<br />
       - Para este caso se debe usar globbing<br />
-      - Es importante que el globbing quede fuera comillas dobles<br />
+      - Es importante que el globbing quede fuera de comillas dobles<br />
       - Si quieres saber más revisa el tema de globbing<br />
 
   utter_recorrer_dirs_codigo:
   - text: "code:bash:bash/recorrer_dirs.sh"
+
+  utter_funciones_rec_ayuda:
+  - text: >
+      - Son funciones que se mandan a llamar a si mismas<br />
+      - Muy útiles para hacer recorridos recursivos de directorios<br />
+      - Para usarlas hay que establecer casos base y recursivos<br />
+      - Para procesar directorios recursivamente:<ol>
+      <li>Define una función no recursiva para procesar un directorio</li>
+      <li>Define una función recursiva que llama a la no recursiva<br/>
+      y luego busca subdirectorios, llamando recursivamente la función</li></ol>
+
+  utter_funciones_rec_codigo:
+  - text: "code:bash:bash/funciones_rec.sh"
+
+  utter_funciones_rec_ejemplo_codigo:
+  - text: "code:bash:bash/funciones_rec_ejemplo.sh"          
+
+  utter_globbing_ayuda1:
+  - text: >
+      - Sirve para sustituir rutas (y sólo rutas)<br />
+      - Se expresa mediante un patrón que se expande a una o varias rutas<br />
+      - Es de mucha utilidad para recorrer directorios<br />
+      - También es de utilidad con comandos que reciben muchas rutas<br />
+      - Bash expande los patrones antes de ejecutar el comando      
+
+  utter_globbing_ayuda2:
+  - text: >
+      - * Hace match con cualquier cadena de longitud 0 o más<br />
+      - ? Hace match con un solo carácter<br />
+      - [caracteres] Hace match con uno de los caracteres<br />
+      - \{\} Para especificar varios glob patterns separados por coma<br />
+      - [[:clase:]] hace match con un carácter de una clase:<ul>
+      <li>digit, word, space, alnum, alpha, lower, upper, cntrl</li></ul>
+
+  utter_globbing_ejemplo_codigo:      
+  - text: "code:bash:bash/globbing_ejemplo.sh"          
+
+  utter_expansion_comando_codigo:      
+  - text: "code:bash:bash/expansion_comando.sh"
+
+  utter_expansion_comando_ejemplo_codigo:      
+  - text: "code:bash:bash/expansion_comando_ejemplo.sh"              
+    
+  utter_expansion_comando_ayuda:
+  - text: >
+      - Sirven para convertir a cadena la salida de un comando<br />
+      - Una vez que se tiene la cadena se puede usar en otro comando<br />
+      - O se puede asignar a una variable<br />
+      - Otro uso común es en un for<br />
+      - Básicamente la salida del comando se expande a una cadena
+
+  utter_parametros_ayuda:
+  - text: >
+      - Sirven para recibir entradas de usuario<br />
+      - Los parámetros son variables especiales en tu script<br />
+      - Son posicionales y constantes (no se puede cambiar su valor)<br />
+      - En tu script tienes acceso a ellos mediante variables $1, $2, etc.<br />
+      - Existe una variable especial $0 que contiene la ruta del script<br />
+      - La ruta es relativa o absoluta de acuerdo a cómo se ejecutó el script<br />
+
+  utter_parametros_ejemplo_codigo:      
+  - text: "code:bash:bash/parametros_ejemplo.sh"                
+  
+  utter_parametros_especiales_ayuda:
+  - text: >
+      - * NO usarlo, expande a una cadena con todos los parámetros<br />
+      - @ expando los parámetros como una lista de argumentos<br />
+      - # número de parámetros pasados<br />
+      - ? código de retorno del comando anterior<br />
+      - - banderas de opciones que usa el shell<br />
+      - $ PID del shell actual<br />
+      - ! PID del último proceso ejecutado en segundo plano<br />
+      - _ último argumento del comando anterior
       
-  uttero_temario:
+  utter_parametros_especiales_ejemplo_codigo:      
+  - text: "code:bash:bash/parametros_especiales_ejemplo.sh"                
+
+  utter_expansion_variables_ayuda1:
+  - text: >
+      - Al expandir una variable se pueden hacer preprocesamientos<br />
+      - La sintaxis general es ${variable}<br />
+      - ${variable} es equivalente a $variable<br />
+      - Sirve también para resolver casos ambiguos de expansiones<br />
+      - Dicha sintaxis se acompaña de varios operadores especiales<br />
+      - Los operadores especiales usan los mismos patrones que el globbing
+      
+  utter_expansion_variables_ayuda2:
+  - text: >
+      - ${var#patron} remueve cadena más corta desde la izquierda<br />
+      - ${var##patron} remueve cadena más larga desde la izquierda<br />
+      - ${var%patron} remueve cadena más corta desde la derecha<br />
+      - ${var%%patron} remueve cadena más larga desde la derecha<br />
+      - ${var/patron/remplazo} remplaza la primera cadena que hace match<br />
+      - ${var//patron/remplazo} remplaza todas las cadenas que hacen match<br />
+      - ${var/#patron/remplazo} remplaza primera cadena por la izquierda<br />
+      - ${var/%patron/remplazo} remplaza primera cadena por la derecha<br />
+      - ${#var} expande a la longitud del valor en bytes<br />
+      - ${var:inicio[:longitud]} para hacer rebanadas<br />
+      - ${var[^|^^|,|,,][patron]} a mayúsculas o minúsculas parte o todo
+
+  utter_expansion_variables_ejemplo_codigo:      
+  - text: "code:bash:bash/expansion_variables_ejemplo.sh"
+
+  utter_getopts_ayuda:
+  - text: >
+      - Para integrar parámetros modificadores (keyword)<br />
+      - Los modificadores no son posicionales<br />
+      - getopts es un built-in de bash, sigue POSIX<br />
+      - getopts está limitado a modificadores de una sola letra<br />
+      - Los modificadores deben ir antes de parámetros posicionales<br />
+
+  utter_getopts_codigo:      
+  - text: "code:bash:bash/getopts.sh"
+
+      
+  utter_temario:
   - text: >
       Estos son los temas con los que te puedo ayudar:<br />
        - Bloques<br />
        - Códigos de retorno (verdad y falsedad)<br />
        - Comentario especial hash bang<br />
-       - Encadenamiento<br />
        - Ciclo for<br />
        - Ciclo while<br />
        - Comandos de testing<br />
+       - Encadenamiento<br />
+       - Expansión de sustitución de comando<br />
+       - Expansión de variables<br />
        - Funciones<br />
+       - Funciones recursivas<br />
+       - Getopts<br />
+       - Globbing<br />
        - If de bloque<br />
        - If de línea<br />
+       - Parámetros<br />
+       - Parámetros especiales<br />
        - Quoting<br />
        - Recorrer directorios<br />
        - Redirección de flujo<br />

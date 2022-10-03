@@ -170,3 +170,68 @@ nlu:
     - iterar elementos de un directorio
     - for para carpetas
     - for para directorios
+
+- intent: funciones_rec
+  examples: |    
+    - funciones recursivas
+    - recursividad
+    - recursión
+    - procesar directorio recursivamente
+
+- intent: globbing
+  examples: |    
+    - globbing
+    - globing
+    - patrones globales
+    - expandir rutas
+    - expansión rutas
+
+- intent: expansion_comando
+  examples: |
+    - asignar salida a una variable
+    - expansión de sustitución de comando
+    - expansión de comando
+    - expansión de salida
+    - convertir comando a cadena
+    - salida de comando a cadena
+
+- intent: parametros
+  examples: |
+    - parámetros
+    - parámetros posicionales
+    - variables numeradas
+    - recibir entrada
+    - pasar valores a script
+    - pasar cosas a script
+
+- intent: parametros_especiales
+  examples: |
+    - parámetros especiales
+    - variables especiales
+    - valores especiales
+    - número de parámetros
+    - lista de parámetros
+    - PID parámetro
+
+- intent: expansion_variables
+  examples: |
+    - expansión de variables
+    - expansión de parámetros
+    - remplazar parte de valor
+    - capturar valor variable
+    - tamaño de cadena
+    - convertir a minúsculas
+    - convertir a mayúsculas
+    - sacar parte del valor
+    - borrar parte del valor
+
+- intent: getopts
+  examples: |
+    - getopts
+    - getops
+    - agregar modificadores
+    - parámetros keyword
+    - parámetros no posicionales
+    - agregar opciones
+    - poner opciones
+    - parámetros opción
