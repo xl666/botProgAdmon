@@ -173,3 +173,23 @@ stories:
     - intent: getopts
     - action: utter_getopts_codigo
     - action: utter_getopts_ayuda
+
+- story: variables_entorno
+  steps:      
+    - intent: variables_entorno
+    - action: utter_variables_entorno_codigo
+    - action: utter_variables_entorno_ayuda
+
+- story: arreglos
+  steps:      
+    - intent: arreglos
+    - action: utter_arreglos_ayuda
+    - action: utter_arreglos_codigo
+    - intent: ejemplo
+    - action: utter_arreglos_ejemplo_codigo
+
+- story: params_variables
+  steps:      
+    - intent: params_variables
+    - action: utter_params_variables_ayuda
+    - action: utter_params_variables_codigo

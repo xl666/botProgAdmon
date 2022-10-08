@@ -43,6 +43,8 @@ nlu:
     - qué sabes hacer?
     - que sabes?
     - temas
+    - ayuda
+    - ayudame
 
 - intent: hash_bang
   examples: |
@@ -235,3 +237,26 @@ nlu:
     - agregar opciones
     - poner opciones
     - parámetros opción
+
+- intent: variables_entorno
+  examples: |
+    - variables de entorno
+    - variables padre
+    - exportar variables
+    - variables de sistema
+
+- intent: arreglos
+  examples: |
+    - arreglos
+    - arrays
+    - listas
+
+- intent: params_variables
+  examples: |
+    - parámetros variables
+    - params variables
+    - multiples parametros
+    - recibir muchos parametros
+    - como manejar muchos parametros
+    - manejar muchas entradas
+    - entradas multiples

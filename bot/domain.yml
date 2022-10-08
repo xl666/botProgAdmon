@@ -27,6 +27,9 @@ intents:
   - parametros_especiales
   - expansion_variables
   - getopts
+  - variables_entorno
+  - arreglos
+  - params_variables
 
 responses:
   utter_greet:
@@ -335,10 +338,50 @@ responses:
   utter_getopts_codigo:      
   - text: "code:bash:bash/getopts.sh"
 
+  utter_variables_entorno_ayuda:
+  - text: >
+      - Son variables asociadas a los procesos<br />
+      - Los procesos hijos las copian de los procesos padre<br />
+      - Se comportan como variables globales<br />
+      - CUIDADO, no son variables del sistema<br />
+      - Son útiles para establecer configuración<br />
+      - Funcionan como mecanismo de comunicación entre procesos<br />
+
+  utter_variables_entorno_codigo:      
+  - text: "code:bash:bash/variables_entorno.sh"      
+      
+  utter_arreglos_ayuda:
+  - text: >
+      - Colección lineal de elementos<br />
+      - Usar en vez de cadenas separadas por espacios<br />
+      - Al igual que con resultados de globbing, no son precisamente cadenas<br />
+      - Las sentencias de control los pueden usar directamente<br />
+      - Útiles para procesar parámetros variables<br />
+      - NO tratar de hacer funciones que regresan arreglos<br />
+      - Las funciones sólo pueden regresar cadenas o códigos de retorno<br />
+      - Si necesitas hacer algo complejo con arreglos, ¡¡NO uses bash!!
+
+  utter_arreglos_codigo:
+  - text: "code:bash:bash/arreglos.sh"
+
+  utter_arreglos_ejemplo_codigo:
+  - text: "code:bash:bash/arreglos_ejemplo.sh"
+
+  utter_params_variables_ayuda:
+  - text: >
+      - Se refiere a poder recibir cualquier número de parámetros<br />
+      - Comandos como cp, mv y rm tienen este estilo de parámetros<br />
+      - La clave es usar arreglos y la variable especial $@<br />
+      - Usualmente el último parámetro es especial<br />
+      - En la documentación de ayuda utiliza ... para señalarlos
+
+  utter_params_variables_codigo:
+  - text: "code:bash:bash/params_variables.sh"
       
   utter_temario:
   - text: >
       Estos son los temas con los que te puedo ayudar:<br />
+       - Arreglos<br />
        - Bloques<br />
        - Códigos de retorno (verdad y falsedad)<br />
        - Comentario especial hash bang<br />
@@ -356,10 +399,12 @@ responses:
        - If de línea<br />
        - Parámetros<br />
        - Parámetros especiales<br />
+       - Parámetros variables<br />
        - Quoting<br />
        - Recorrer directorios<br />
        - Redirección de flujo<br />
        - Variables<br />
+       - Variables de entorno<br />
        
        
 
