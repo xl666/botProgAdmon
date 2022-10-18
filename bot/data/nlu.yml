@@ -260,3 +260,16 @@ nlu:
     - como manejar muchos parametros
     - manejar muchas entradas
     - entradas multiples
+
+- intent: regexps
+  examples: |
+    - expresiones regulares
+    - regexps
+    - regular expresions
+    - patrones de texto
+    - operadores regulares
+    - capturar texto
+    - filtrar texto
+    - grep
+    - como usar grep
+    - como me quedo con un pedazo del texto

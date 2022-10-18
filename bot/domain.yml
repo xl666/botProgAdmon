@@ -30,6 +30,7 @@ intents:
   - variables_entorno
   - arreglos
   - params_variables
+  - regexps
 
 responses:
   utter_greet:
@@ -377,7 +378,28 @@ responses:
 
   utter_params_variables_codigo:
   - text: "code:bash:bash/params_variables.sh"
-      
+
+  utter_regexps_ayuda1:
+  - text: >
+      - También conocidas con RegExps<br /> 
+      - Sirven pare definir patrones de texto<br />
+      - Usos: filtrar, verificar cadenas, capturar subcadenas<br />
+      - Comandos como grep hacen un uso extensivo de éstas
+
+  utter_regexps_ayuda2:
+  - text: >
+      - egrep es equivalente a grep -E, preferir último<br />
+      - egrep sin opciones filtra líneas que contengan patrón<br />
+      - egrep -o captura subcadenas que cumplan con el patrón<br />
+      - grep -P activa operadores regulares extendidos de Perl<br />
+      - [[ cadena =~ regexp ]] cadena cumple con regexp
+
+  utter_regexps_codigo:
+  - text: "code:bash:bash/regexps.sh"
+
+  utter_regexps_ejemplo_codigo:
+  - text: "code:bash:bash/regexps_ejemplo.sh"    
+    
   utter_temario:
   - text: >
       Estos son los temas con los que te puedo ayudar:<br />
@@ -391,6 +413,7 @@ responses:
        - Encadenamiento<br />
        - Expansión de sustitución de comando<br />
        - Expansión de variables<br />
+       - Expresiones regulares<br />
        - Funciones<br />
        - Funciones recursivas<br />
        - Getopts<br />

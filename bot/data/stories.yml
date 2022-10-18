@@ -193,3 +193,12 @@ stories:
     - intent: params_variables
     - action: utter_params_variables_ayuda
     - action: utter_params_variables_codigo
+
+- story: regexps
+  steps:      
+    - intent: regexps
+    - action: utter_regexps_ayuda1
+    - action: utter_regexps_ayuda2
+    - action: utter_regexps_codigo
+    - intent: ejemplo
+    - action: utter_regexps_ejemplo_codigo
