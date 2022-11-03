@@ -273,3 +273,12 @@ nlu:
     - grep
     - como usar grep
     - como me quedo con un pedazo del texto
+
+- intent: cron
+  examples: |
+    - cron
+    - crontab
+    - cron jobs
+    - calendarizar tarea
+    - calendariar script
+    - como repetir script

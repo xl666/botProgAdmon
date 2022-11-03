@@ -31,6 +31,7 @@ intents:
   - arreglos
   - params_variables
   - regexps
+  - cron
 
 responses:
   utter_greet:
@@ -56,36 +57,36 @@ responses:
   - text: "No tengo ejemplos para este tema, pide a tu maestro que agregue"
        
   utter_if_bloque_ayuda:
-  - text: >
-      - Recuerda que se puede poner cualquier comando en la condición,<br/>
+  - text: |
+      - Recuerda que se puede poner cualquier comando en la condición,
         lo que importa es el código de retorno del comando
 
   utter_if_bloque_codigo:
   - text: "code:bash:bash/if_bloque.sh"
 
   utter_if_linea_ayuda:
-  - text: >
-      - Técnicamente no es un if, más bien una forma de encadenamiento<br />
-      - El comando_condicion es cualquier comando, se evalúa código de retorno<br />
+  - text: |
+      - Técnicamente no es un if, más bien una forma de encadenamiento
+      - El comando_condicion es cualquier comando, se evalúa código de retorno
       - Si quieres saber más consulta el tema de encadenamiento
 
   utter_if_linea_codigo:
   - text: "code:bash:bash/if_linea.sh"    
 
   utter_hash_bang_ayuda:
-  - text: >
-      - Este comentario debe ir en la primera línea del script<br />
-      - No debe haber espacios antes de ponerlo<br />
-      - Le indica al sistema el intérprete que se desea usar<br />
+  - text: |
+      - Este comentario debe ir en la primera línea del script
+      - No debe haber espacios antes de ponerlo
+      - Le indica al sistema el intérprete que se desea usar
       - Sirve para cualquier lenguaje interpretado, no sólo bash
 
   utter_hash_bang_codigo:
   - text: "code:bash:bash/hash_bang.sh"
 
   utter_encadenamiento_ayuda:
-  - text: >
-      - Sirve para ejecutar varios comandos seguidos<br />
-      - Con ; siempre se ejecutan todos<br />
+  - text: |
+      - Sirve para ejecutar varios comandos seguidos
+      - Con ; siempre se ejecutan todos
       - con && y || se ejecutan de acuerdo a valor de verdad
 
   utter_encadenamiento_complemento:
@@ -98,20 +99,20 @@ responses:
   - text: "code:bash:bash/encadenamiento_ejemplo.sh"
     
   utter_codigos_retorno_ayuda:
-  - text: >
-      - Al terminar, todos los procesos le regresan un número al SO<br/>
+  - text: |
+      - Al terminar, todos los procesos le regresan un número al SO
       - Básicamente 0 es verdadero y cualquier otro número es falso
 
   utter_codigos_retorno_codigo:
   - text: "code:bash:bash/codigos_retorno.sh"
 
   utter_for_ayuda:
-  - text: >
-      - Se comporta como un for each (como el de python)<br />
-      - Cuidado, se itera sobre una cadena<br />
-      - Cada elemento en la cadena es separado por algún separador<br />
-      - Por ejemplo, los espacios y saltos de línea son separadores<br />
-      - Los caracteres separadores están definidos en la variable IFS<br />
+  - text: |
+      - Se comporta como un for each (como el de python)
+      - Cuidado, se itera sobre una cadena
+      - Cada elemento en la cadena es separado por algún separador
+      - Por ejemplo, los espacios y saltos de línea son separadores
+      - Los caracteres separadores están definidos en la variable IFS
       - Si editas IFS puedes cambiar el comportamiento de for     
 
   utter_for_codigo:
@@ -121,8 +122,8 @@ responses:
   - text: "code:bash:bash/for_ejemplo.sh"
 
   utter_while_ayuda:
-  - text: >
-      - Básicamente igual que en cualquier lenguaje<br />
+  - text: |
+      - Básicamente igual que en cualquier lenguaje
       - En la condición lo que importa es el código de retorno del comando
 
   utter_while_codigo:
@@ -132,36 +133,36 @@ responses:
   - text: "code:bash:bash/while_ejemplo.sh"
 
   utter_redireccion_flujo_ayuda:
-  - text: >
-      - > Redirige salida estándar<br />
-      - >> Redirige salida agregando al final<br />
-      - < Redirige entrada<br />
-      - 2> Redirige salida de error<br />
-      - 2>> Redirige salida de error agregando al final<br />
-      - &> Redirige salida y salida de error<br />
-      - &>> Redirige salida y salida de error al final<br />
-      - | Conecta salida y entrada de dos comandos<br />
+  - text: |
+      - > Redirige salida estándar
+      - >> Redirige salida agregando al final
+      - < Redirige entrada
+      - 2> Redirige salida de error
+      - 2>> Redirige salida de error agregando al final
+      - &> Redirige salida y salida de error
+      - &>> Redirige salida y salida de error al final
+      - | Conecta salida y entrada de dos comandos
         
   utter_redireccion_flujo_ejemplo_codigo:
   - text: "code:bash:bash/redireccion_ejemplo.sh"            
   utter_variables_ayuda:
-  - text: >
-      - No puedes dejar espacios en la declaración<br />
-      - En bash no hay tipos de datos<br />
-      - Todas las variables son cadenas<br />
-      - Si una variable no existe su valor es cadena vacía<br />
-      - Para recuperar el valor de una variable anteponer $<br />
-      - CUIDADO la doble comilla no es para crear cadenas<br />
+  - text: |
+      - No puedes dejar espacios en la declaración
+      - En bash no hay tipos de datos
+      - Todas las variables son cadenas
+      - Si una variable no existe su valor es cadena vacía
+      - Para recuperar el valor de una variable anteponer $
+      - CUIDADO la doble comilla no es para crear cadenas
       - Para más información revisa el tema de quoting
 
   utter_variables_codigo:
   - text: "code:bash:bash/variables.sh"      
 
   utter_bloques_ayuda:
-  - text: >
-      - Sirven para hacer más de una cosa, agrupando comandos<br />
-      - Hay contextos donde se espera sólo un comando pero se quieren varios<br />
-      - Dentro del bloque los comandos van encadenados<br />
+  - text: |
+      - Sirven para hacer más de una cosa, agrupando comandos
+      - Hay contextos donde se espera sólo un comando pero se quieren varios
+      - Dentro del bloque los comandos van encadenados
       - Hay que tener mucho cuidado con los espacios y los ;
 
   utter_bloques_codigo:
@@ -171,27 +172,27 @@ responses:
   - text: "code:bash:bash/bloques_ejemplo.sh"    
 
   utter_quoting_ayuda:
-  - text: >
-      - Se refiere a poner cosas entre comillas<br />
-      - Las comillas pueden ser dobles o simples<br />
-      - Es una forma de lidiar con los espacios<br/> 
+  - text: |
+      - Se refiere a poner cosas entre comillas
+      - Las comillas pueden ser dobles o simples
+      - Es una forma de lidiar con los espacios 
       - Para bash los espacios pueden significar parámetros
-      - Lo que esté entre comillas, aunque tenga espacios,<br />
-        se considera como una sola cosa<br/>
-      - La comilla doble expande valores<br/>
-      - La comilla simple no expande valores<br/>
+      - Lo que esté entre comillas, aunque tenga espacios,
+        se considera como una sola cosa
+      - La comilla doble expande valores
+      - La comilla simple no expande valores
       - Siempre pon tus variables y parámetros entre doble comilla
 
   utter_quoting_ejemplo_codigo:
   - text: "code:bash:bash/quoting_ejemplo.sh"
 
   utter_comandos_testing_ayuda1:
-  - text: >
-      - Son comandos para hacer evaluaciones booleanas<br />
-      - Al igual que otros comandos regresan un código de retorno<br />
-      - NO son parte sintáctica de un if o un while<br />
-      - Son 3 comandos de este tipo: test, [], [[]]<br />
-      - test y [] son el mismo comando<br />
+  - text: |
+      - Son comandos para hacer evaluaciones booleanas
+      - Al igual que otros comandos regresan un código de retorno
+      - NO son parte sintáctica de un if o un while
+      - Son 3 comandos de este tipo: test, [], [[]]
+      - test y [] son el mismo comando
       - [[]] hace lo mismo que test pero tiene más opciones
 
   utter_comandos_testing_codigo:
@@ -201,12 +202,12 @@ responses:
   - text: "code:bash:bash/comandos_testing_ejemplo.sh"    
 
   utter_funciones_ayuda:
-  - text: >
-      - Sirven para agrupar funcionalidad y descomponer problemas<br />
-      - Los parámetros que reciben son posicionales, como en un script<br />
-      - Si quieres regresar un valor usa echo (trata de que sea uno)<br />
-      - Con return se puede regresar un código de retorno<br />
-      - Las funciones se invocan como cualquier comando<br />
+  - text: |
+      - Sirven para agrupar funcionalidad y descomponer problemas
+      - Los parámetros que reciben son posicionales, como en un script
+      - Si quieres regresar un valor usa echo (trata de que sea uno)
+      - Con return se puede regresar un código de retorno
+      - Las funciones se invocan como cualquier comando
       - Siempre que declares usa local para no definir en ámbito global
   
   utter_funciones_codigo:
@@ -216,24 +217,24 @@ responses:
   - text: "code:bash:bash/funciones_ejemplo.sh"        
 
   utter_recorrer_dirs_ayuda:
-  - text: >
-      - NUNCA uses ls para recorrer lo archivos de un directorio<br />
-      - ls no funciona bien si hay espacios en los nombres de archivos<br />
-      - Para este caso se debe usar globbing<br />
-      - Es importante que el globbing quede fuera de comillas dobles<br />
-      - Si quieres saber más revisa el tema de globbing<br />
+  - text: |
+      - NUNCA uses ls para recorrer lo archivos de un directorio
+      - ls no funciona bien si hay espacios en los nombres de archivos
+      - Para este caso se debe usar globbing
+      - Es importante que el globbing quede fuera de comillas dobles
+      - Si quieres saber más revisa el tema de globbing
 
   utter_recorrer_dirs_codigo:
   - text: "code:bash:bash/recorrer_dirs.sh"
 
   utter_funciones_rec_ayuda:
-  - text: >
-      - Son funciones que se mandan a llamar a si mismas<br />
-      - Muy útiles para hacer recorridos recursivos de directorios<br />
-      - Para usarlas hay que establecer casos base y recursivos<br />
+  - text: |
+      - Son funciones que se mandan a llamar a si mismas
+      - Muy útiles para hacer recorridos recursivos de directorios
+      - Para usarlas hay que establecer casos base y recursivos
       - Para procesar directorios recursivamente:<ol>
       <li>Define una función no recursiva para procesar un directorio</li>
-      <li>Define una función recursiva que llama a la no recursiva<br/>
+      <li>Define una función recursiva que llama a la no recursiva
       y luego busca subdirectorios, llamando recursivamente la función</li></ol>
 
   utter_funciones_rec_codigo:
@@ -243,19 +244,19 @@ responses:
   - text: "code:bash:bash/funciones_rec_ejemplo.sh"          
 
   utter_globbing_ayuda1:
-  - text: >
-      - Sirve para sustituir rutas (y sólo rutas)<br />
-      - Se expresa mediante un patrón que se expande a una o varias rutas<br />
-      - Es de mucha utilidad para recorrer directorios<br />
-      - También es de utilidad con comandos que reciben muchas rutas<br />
+  - text: |
+      - Sirve para sustituir rutas (y sólo rutas)
+      - Se expresa mediante un patrón que se expande a una o varias rutas
+      - Es de mucha utilidad para recorrer directorios
+      - También es de utilidad con comandos que reciben muchas rutas
       - Bash expande los patrones antes de ejecutar el comando      
 
   utter_globbing_ayuda2:
-  - text: >
-      - * Hace match con cualquier cadena de longitud 0 o más<br />
-      - ? Hace match con un solo carácter<br />
-      - [caracteres] Hace match con uno de los caracteres<br />
-      - \{\} Para especificar varios glob patterns separados por coma<br />
+  - text: |
+      - * Hace match con cualquier cadena de longitud 0 o más
+      - ? Hace match con un solo carácter
+      - [caracteres] Hace match con uno de los caracteres
+      - \{\} Para especificar varios glob patterns separados por coma
       - [[:clase:]] hace match con un carácter de una clase:<ul>
       <li>digit, word, space, alnum, alpha, lower, upper, cntrl</li></ul>
 
@@ -269,97 +270,97 @@ responses:
   - text: "code:bash:bash/expansion_comando_ejemplo.sh"              
     
   utter_expansion_comando_ayuda:
-  - text: >
-      - Sirven para convertir a cadena la salida de un comando<br />
-      - Una vez que se tiene la cadena se puede usar en otro comando<br />
-      - O se puede asignar a una variable<br />
-      - Otro uso común es en un for<br />
+  - text: |
+      - Sirven para convertir a cadena la salida de un comando
+      - Una vez que se tiene la cadena se puede usar en otro comando
+      - O se puede asignar a una variable
+      - Otro uso común es en un for
       - Básicamente la salida del comando se expande a una cadena
 
   utter_parametros_ayuda:
-  - text: >
-      - Sirven para recibir entradas de usuario<br />
-      - Los parámetros son variables especiales en tu script<br />
-      - Son posicionales y constantes (no se puede cambiar su valor)<br />
-      - En tu script tienes acceso a ellos mediante variables $1, $2, etc.<br />
-      - Existe una variable especial $0 que contiene la ruta del script<br />
-      - La ruta es relativa o absoluta de acuerdo a cómo se ejecutó el script<br />
+  - text: |
+      - Sirven para recibir entradas de usuario
+      - Los parámetros son variables especiales en tu script
+      - Son posicionales y constantes (no se puede cambiar su valor)
+      - En tu script tienes acceso a ellos mediante variables $1, $2, etc.
+      - Existe una variable especial $0 que contiene la ruta del script
+      - La ruta es relativa o absoluta de acuerdo a cómo se ejecutó el script
 
   utter_parametros_ejemplo_codigo:      
   - text: "code:bash:bash/parametros_ejemplo.sh"                
   
   utter_parametros_especiales_ayuda:
-  - text: >
-      - * NO usarlo, expande a una cadena con todos los parámetros<br />
-      - @ expando los parámetros como una lista de argumentos<br />
-      - # número de parámetros pasados<br />
-      - ? código de retorno del comando anterior<br />
-      - - banderas de opciones que usa el shell<br />
-      - $ PID del shell actual<br />
-      - ! PID del último proceso ejecutado en segundo plano<br />
+  - text: |
+      - * NO usarlo, expande a una cadena con todos los parámetros
+      - @ expando los parámetros como una lista de argumentos
+      - # número de parámetros pasados
+      - ? código de retorno del comando anterior
+      - - banderas de opciones que usa el shell
+      - $ PID del shell actual
+      - ! PID del último proceso ejecutado en segundo plano
       - _ último argumento del comando anterior
       
   utter_parametros_especiales_ejemplo_codigo:      
   - text: "code:bash:bash/parametros_especiales_ejemplo.sh"                
 
   utter_expansion_variables_ayuda1:
-  - text: >
-      - Al expandir una variable se pueden hacer preprocesamientos<br />
-      - La sintaxis general es ${variable}<br />
-      - ${variable} es equivalente a $variable<br />
-      - Sirve también para resolver casos ambiguos de expansiones<br />
-      - Dicha sintaxis se acompaña de varios operadores especiales<br />
+  - text: |
+      - Al expandir una variable se pueden hacer preprocesamientos
+      - La sintaxis general es ${variable}
+      - ${variable} es equivalente a $variable
+      - Sirve también para resolver casos ambiguos de expansiones
+      - Dicha sintaxis se acompaña de varios operadores especiales
       - Los operadores especiales usan los mismos patrones que el globbing
       
   utter_expansion_variables_ayuda2:
-  - text: >
-      - ${var#patron} remueve cadena más corta desde la izquierda<br />
-      - ${var##patron} remueve cadena más larga desde la izquierda<br />
-      - ${var%patron} remueve cadena más corta desde la derecha<br />
-      - ${var%%patron} remueve cadena más larga desde la derecha<br />
-      - ${var/patron/remplazo} remplaza la primera cadena que hace match<br />
-      - ${var//patron/remplazo} remplaza todas las cadenas que hacen match<br />
-      - ${var/#patron/remplazo} remplaza primera cadena por la izquierda<br />
-      - ${var/%patron/remplazo} remplaza primera cadena por la derecha<br />
-      - ${#var} expande a la longitud del valor en bytes<br />
-      - ${var:inicio[:longitud]} para hacer rebanadas<br />
+  - text: |
+      - ${var#patron} remueve cadena más corta desde la izquierda
+      - ${var##patron} remueve cadena más larga desde la izquierda
+      - ${var%patron} remueve cadena más corta desde la derecha
+      - ${var%%patron} remueve cadena más larga desde la derecha
+      - ${var/patron/remplazo} remplaza la primera cadena que hace match
+      - ${var//patron/remplazo} remplaza todas las cadenas que hacen match
+      - ${var/#patron/remplazo} remplaza primera cadena por la izquierda
+      - ${var/%patron/remplazo} remplaza primera cadena por la derecha
+      - ${#var} expande a la longitud del valor en bytes
+      - ${var:inicio[:longitud]} para hacer rebanadas
       - ${var[^|^^|,|,,][patron]} a mayúsculas o minúsculas parte o todo
 
   utter_expansion_variables_ejemplo_codigo:      
   - text: "code:bash:bash/expansion_variables_ejemplo.sh"
 
   utter_getopts_ayuda:
-  - text: >
-      - Para integrar parámetros modificadores (keyword)<br />
-      - Los modificadores no son posicionales<br />
-      - getopts es un built-in de bash, sigue POSIX<br />
-      - getopts está limitado a modificadores de una sola letra<br />
-      - Los modificadores deben ir antes de parámetros posicionales<br />
+  - text: |
+      - Para integrar parámetros modificadores (keyword)
+      - Los modificadores no son posicionales
+      - getopts es un built-in de bash, sigue POSIX
+      - getopts está limitado a modificadores de una sola letra
+      - Los modificadores deben ir antes de parámetros posicionales
 
   utter_getopts_codigo:      
   - text: "code:bash:bash/getopts.sh"
 
   utter_variables_entorno_ayuda:
-  - text: >
-      - Son variables asociadas a los procesos<br />
-      - Los procesos hijos las copian de los procesos padre<br />
-      - Se comportan como variables globales<br />
-      - CUIDADO, no son variables del sistema<br />
-      - Son útiles para establecer configuración<br />
-      - Funcionan como mecanismo de comunicación entre procesos<br />
+  - text: |
+      - Son variables asociadas a los procesos
+      - Los procesos hijos las copian de los procesos padre
+      - Se comportan como variables globales
+      - CUIDADO, no son variables del sistema
+      - Son útiles para establecer configuración
+      - Funcionan como mecanismo de comunicación entre procesos
 
   utter_variables_entorno_codigo:      
   - text: "code:bash:bash/variables_entorno.sh"      
       
   utter_arreglos_ayuda:
-  - text: >
-      - Colección lineal de elementos<br />
-      - Usar en vez de cadenas separadas por espacios<br />
-      - Al igual que con resultados de globbing, no son precisamente cadenas<br />
-      - Las sentencias de control los pueden usar directamente<br />
-      - Útiles para procesar parámetros variables<br />
-      - NO tratar de hacer funciones que regresan arreglos<br />
-      - Las funciones sólo pueden regresar cadenas o códigos de retorno<br />
+  - text: |
+      - Colección lineal de elementos
+      - Usar en vez de cadenas separadas por espacios
+      - Al igual que con resultados de globbing, no son precisamente cadenas
+      - Las sentencias de control los pueden usar directamente
+      - Útiles para procesar parámetros variables
+      - NO tratar de hacer funciones que regresan arreglos
+      - Las funciones sólo pueden regresar cadenas o códigos de retorno
       - Si necesitas hacer algo complejo con arreglos, ¡¡NO uses bash!!
 
   utter_arreglos_codigo:
@@ -369,29 +370,29 @@ responses:
   - text: "code:bash:bash/arreglos_ejemplo.sh"
 
   utter_params_variables_ayuda:
-  - text: >
-      - Se refiere a poder recibir cualquier número de parámetros<br />
-      - Comandos como cp, mv y rm tienen este estilo de parámetros<br />
-      - La clave es usar arreglos y la variable especial $@<br />
-      - Usualmente el último parámetro es especial<br />
+  - text: |
+      - Se refiere a poder recibir cualquier número de parámetros
+      - Comandos como cp, mv y rm tienen este estilo de parámetros
+      - La clave es usar arreglos y la variable especial $@
+      - Usualmente el último parámetro es especial
       - En la documentación de ayuda utiliza ... para señalarlos
 
   utter_params_variables_codigo:
   - text: "code:bash:bash/params_variables.sh"
 
   utter_regexps_ayuda1:
-  - text: >
-      - También conocidas con RegExps<br /> 
-      - Sirven pare definir patrones de texto<br />
-      - Usos: filtrar, verificar cadenas, capturar subcadenas<br />
+  - text: |
+      - También conocidas con RegExps 
+      - Sirven pare definir patrones de texto
+      - Usos: filtrar, verificar cadenas, capturar subcadenas
       - Comandos como grep hacen un uso extensivo de éstas
 
   utter_regexps_ayuda2:
-  - text: >
-      - egrep es equivalente a grep -E, preferir último<br />
-      - egrep sin opciones filtra líneas que contengan patrón<br />
-      - egrep -o captura subcadenas que cumplan con el patrón<br />
-      - grep -P activa operadores regulares extendidos de Perl<br />
+  - text: |
+      - egrep es equivalente a grep -E, preferir último
+      - egrep sin opciones filtra líneas que contengan patrón
+      - egrep -o captura subcadenas que cumplan con el patrón
+      - grep -P activa operadores regulares extendidos de Perl
       - [[ cadena =~ regexp ]] cadena cumple con regexp
 
   utter_regexps_codigo:
@@ -399,35 +400,49 @@ responses:
 
   utter_regexps_ejemplo_codigo:
   - text: "code:bash:bash/regexps_ejemplo.sh"    
+
+  utter_cron_ayuda:
+  - text: |
+      - Sirven para calendarizar tareas
+      - Se requiere de algún demonio del sistema
+      - Por ejemplo cronie
+      - Cada usuario tiene sus propios cron jobs
+      - crontab -l muestra los cronjobs del usuario
+      - crontab -e permite editar el crontab del usuario
+
+  utter_cron_codigo:
+  - text: "code:bash:bash/crontab.sh"
+     
     
   utter_temario:
-  - text: >
-      Estos son los temas con los que te puedo ayudar:<br />
-       - Arreglos<br />
-       - Bloques<br />
-       - Códigos de retorno (verdad y falsedad)<br />
-       - Comentario especial hash bang<br />
-       - Ciclo for<br />
-       - Ciclo while<br />
-       - Comandos de testing<br />
-       - Encadenamiento<br />
-       - Expansión de sustitución de comando<br />
-       - Expansión de variables<br />
-       - Expresiones regulares<br />
-       - Funciones<br />
-       - Funciones recursivas<br />
-       - Getopts<br />
-       - Globbing<br />
-       - If de bloque<br />
-       - If de línea<br />
-       - Parámetros<br />
-       - Parámetros especiales<br />
-       - Parámetros variables<br />
-       - Quoting<br />
-       - Recorrer directorios<br />
-       - Redirección de flujo<br />
-       - Variables<br />
-       - Variables de entorno<br />
+  - text: |
+      Estos son los temas con los que te puedo ayudar:
+       - Arreglos
+       - Bloques
+       - Códigos de retorno (verdad y falsedad)
+       - Comentario especial hash bang
+       - Ciclo for
+       - Ciclo while
+       - Comandos de testing
+       - Cron
+       - Encadenamiento
+       - Expansión de sustitución de comando
+       - Expansión de variables
+       - Expresiones regulares
+       - Funciones
+       - Funciones recursivas
+       - Getopts
+       - Globbing
+       - If de bloque
+       - If de línea
+       - Parámetros
+       - Parámetros especiales
+       - Parámetros variables
+       - Quoting
+       - Recorrer directorios
+       - Redirección de flujo
+       - Variables
+       - Variables de entorno
        
        
 

@@ -202,3 +202,10 @@ stories:
     - action: utter_regexps_codigo
     - intent: ejemplo
     - action: utter_regexps_ejemplo_codigo
+
+- story: cron
+  steps:      
+    - intent: cron
+    - action: utter_cron_ayuda
+    - action: utter_cron_codigo
+     
