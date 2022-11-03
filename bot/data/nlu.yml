@@ -282,3 +282,10 @@ nlu:
     - calendarizar tarea
     - calendariar script
     - como repetir script
+
+- intent: systemd
+  examples: |
+    - systemd
+    - configurar servicio
+    - hacer que mi script sea un servicio
+    - poner mi script como servicio des sistema

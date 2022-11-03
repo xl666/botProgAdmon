@@ -32,6 +32,7 @@ intents:
   - params_variables
   - regexps
   - cron
+  - systemd
 
 responses:
   utter_greet:
@@ -412,8 +413,18 @@ responses:
 
   utter_cron_codigo:
   - text: "code:bash:bash/crontab.sh"
-     
-    
+
+  utter_systemd_ayuda:
+  - text: |
+      - systemd es un sistema de inicialización que hace muchas cosas (incluso puede remplazar a cron)
+      - En este curso nos concentraremos en su capacidad para gestionar servicios
+      - Puedes aprovechar esta capacidad para que tus scripts se administren como otros servicios
+      - Esto es para scripts que corren continuamente (por ejemplo para monitorización)
+      - Si sólo necesitas que tu script se ejecute al inicio, mejor usa un cron (con @reboot)
+
+  utter_systemd_codigo:
+  - text: "code:bash:bash/systemd.sh"
+      
   utter_temario:
   - text: |
       Estos son los temas con los que te puedo ayudar:
@@ -441,6 +452,7 @@ responses:
        - Quoting
        - Recorrer directorios
        - Redirección de flujo
+       - Systemd
        - Variables
        - Variables de entorno
        
