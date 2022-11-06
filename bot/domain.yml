@@ -33,6 +33,7 @@ intents:
   - regexps
   - cron
   - systemd
+  - comandos_procesos
 
 responses:
   utter_greet:
@@ -424,7 +425,10 @@ responses:
 
   utter_systemd_codigo:
   - text: "code:bash:bash/systemd.sh"
-      
+
+  utter_comandos_procesos_codigo:
+    - text: "code:bash:bash/comandos_procesos.sh"
+    
   utter_temario:
   - text: |
       Estos son los temas con los que te puedo ayudar:
@@ -435,6 +439,7 @@ responses:
        - Ciclo for
        - Ciclo while
        - Comandos de testing
+       - Comandos para procesos
        - Cron
        - Encadenamiento
        - Expansión de sustitución de comando

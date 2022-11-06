@@ -289,3 +289,12 @@ nlu:
     - configurar servicio
     - hacer que mi script sea un servicio
     - poner mi script como servicio des sistema
+
+- intent: comandos_procesos
+  examples: |
+    - comandos para procesos
+    - ver procesos
+    - matar procesos
+    - mandar señales a procesos
+    - cachar señales
+    - continuar ejecutando un proceso

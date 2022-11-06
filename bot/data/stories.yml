@@ -17,12 +17,12 @@ stories:
   steps:
   - intent: ejemplo
   - action: utter_sin_ejemplos
-    
+
 - story: temario
   steps:
   - intent: temario
   - action: utter_temario
-    
+
 - story: if bloque
   steps:
   - intent: if_bloque
@@ -49,7 +49,7 @@ stories:
     - action: utter_encadenamiento_complemento
     - intent: ejemplo
     - action: utter_encadenamiento_ejemplo_codigo
-      
+
 - story: codigos retorno
   steps:
     - intent: codigos_retorno
@@ -144,7 +144,7 @@ stories:
     - action: utter_expansion_comando_codigo
     - action: utter_expansion_comando_ayuda
     - intent: ejemplo
-    - action: utter_expansion_comando_ejemplo_codigo  
+    - action: utter_expansion_comando_ejemplo_codigo
 
 - story: parametros
   steps:
@@ -169,19 +169,19 @@ stories:
     - action: utter_expansion_variables_ejemplo_codigo
 
 - story: getopts
-  steps:      
+  steps:
     - intent: getopts
     - action: utter_getopts_codigo
     - action: utter_getopts_ayuda
 
 - story: variables_entorno
-  steps:      
+  steps:
     - intent: variables_entorno
     - action: utter_variables_entorno_codigo
     - action: utter_variables_entorno_ayuda
 
 - story: arreglos
-  steps:      
+  steps:
     - intent: arreglos
     - action: utter_arreglos_ayuda
     - action: utter_arreglos_codigo
@@ -189,13 +189,13 @@ stories:
     - action: utter_arreglos_ejemplo_codigo
 
 - story: params_variables
-  steps:      
+  steps:
     - intent: params_variables
     - action: utter_params_variables_ayuda
     - action: utter_params_variables_codigo
 
 - story: regexps
-  steps:      
+  steps:
     - intent: regexps
     - action: utter_regexps_ayuda1
     - action: utter_regexps_ayuda2
@@ -204,13 +204,18 @@ stories:
     - action: utter_regexps_ejemplo_codigo
 
 - story: cron
-  steps:      
+  steps:
     - intent: cron
     - action: utter_cron_ayuda
     - action: utter_cron_codigo
-     
+
 - story: systemd
   steps:
     - intent: systemd
     - action: utter_systemd_ayuda
     - action: utter_systemd_codigo
+
+- story: comandos_procesos
+  steps:
+    - intent: comandos_procesos
+    - action: utter_comandos_procesos_codigo
