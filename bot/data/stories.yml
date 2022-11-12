@@ -219,3 +219,17 @@ stories:
   steps:
     - intent: comandos_procesos
     - action: utter_comandos_procesos_codigo
+
+- story: cachar_señales
+  steps:
+    - intent: cachar_señales
+    - action: utter_cachar_señales_ayuda
+    - action: utter_cachar_señales_ayuda2
+    - action: utter_cachar_señales_codigo
+
+- story: scripts_remotos
+  steps:
+    - intent: scripts_remotos
+    - action: utter_scripts_remotos_ayuda
+    - action: utter_scripts_remotos_codigo
+    

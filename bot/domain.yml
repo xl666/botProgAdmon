@@ -34,6 +34,8 @@ intents:
   - cron
   - systemd
   - comandos_procesos
+  - cachar_señales
+  - scripts_remotos
 
 responses:
   utter_greet:
@@ -427,12 +429,59 @@ responses:
   - text: "code:bash:bash/systemd.sh"
 
   utter_comandos_procesos_codigo:
-    - text: "code:bash:bash/comandos_procesos.sh"
-    
+  - text: "code:bash:bash/comandos_procesos.sh"
+
+  utter_cachar_señales_ayuda:
+  - text: |
+      - Mediante el envío y cachado de señales los procesos se pueden comunicar
+      - Cualquier proceso le puede enviar cualquier señal a otro proceso
+      - Los procesos que reciben la señal pueden procesar de forma especial la señal
+      - El procesamiento especial sólo aplica a señales atrapables
+      - Sino es atrapables se aplica siempre una acción por defecto
+      - Ejemplos de señales atrapables: term, int, usr1, usr2
+      - Ejemplos de señales no atrapables: kill, stop, cont
+      - Mediante el comando trap se pueden atrapar señales y asociarles una acción
+
+  utter_cachar_señales_ayuda2:
+  - text: |
+      - Para usar correctamente el comando trap en un script bash:
+          <ol>
+          <li>Un script que recibe señales debe poder correr indefinidamente</li>
+          <li>Usa sleep para mantener la ejecución, pero...</li>
+          <li>Si bash está ejecutando una acción larga en primer plano al momento de recibir la señal, la señal no será procesada hasta terminar la acción larga</li>
+          <li>Para evitar el problema anterior, ejecuta acciones largas con & seguido de el comando wait</li>
+          <li>O bien usa un while de espera con sleeps cortos</li>
+          <li>Considera que el registro del trap lleva un poco de tiempo en el kernel</li>
+          <li>Es posible otro proceso envíe la señal antes de estar listo, ejecutándose la acción por defecto para la señal</li>
+          <li>Para prevenir este problema, de ser necesario, agrega sleeps en los lugares indicados para esperar el registro del trap</li>
+          </ol>
+
+  utter_cachar_señales_codigo:
+  - text: "code:bash:bash/trap.sh"
+
+  utter_scripts_remotos_ayuda:
+  - text: |
+      - Se refire a poder ejecutar un script en un servidor remoto
+      - En este curso se utiliza ssh para ese propósito
+      - Dos opciones: el script está en el servidor remoto o está en el cliente local
+      - Se debe tener cuidado con las contraseñas ya que se piden de forma interactiva
+      - La ejecución de un script remoto no se puede automatizar directamente por esta razón
+      - Dos opciones:
+          <ol>
+          <li>Configurar llaves de confianza ssh</li>
+          <li>Usar alguna herramienta de inyección de entradas como expect (xargs no funciona)</li>
+          </ol>
+
+
+  utter_scripts_remotos_codigo:
+    - text: "code:bash:bash/remoto.sh"        
+      
+          
   utter_temario:
   - text: |
       Estos son los temas con los que te puedo ayudar:
        - Arreglos
+       - Atrapar señales de procesos
        - Bloques
        - Códigos de retorno (verdad y falsedad)
        - Comentario especial hash bang
@@ -457,6 +506,7 @@ responses:
        - Quoting
        - Recorrer directorios
        - Redirección de flujo
+       - Scripts remotos
        - Systemd
        - Variables
        - Variables de entorno

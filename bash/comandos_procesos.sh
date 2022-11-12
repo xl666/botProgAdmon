@@ -23,12 +23,3 @@ kill -s señal PID
 killall cmd_proceso # mata (SIGTERM) todos los procesos con el CMD dado
 killall -s señal cmd_proceso # también se puede mandar otra señal
 pkill regexp # Mata procesos (SIGTERM) cuyo CMD hace match con regexp (se puede usar --signal)
-
-# Cachar una señal desde un script usando comando trap
-# trap funcion señales... (se ejecuta la función cuando se reciben las señales)
-
-function noHacerNada () {
-    echo "No voy a terminar..."
-}
-
-trap noHacerNada SIGINT SIGTERM

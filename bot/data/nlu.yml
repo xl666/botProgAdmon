@@ -296,5 +296,21 @@ nlu:
     - ver procesos
     - matar procesos
     - mandar señales a procesos
-    - cachar señales
     - continuar ejecutando un proceso
+
+- intent: cachar_señales
+  examples: |
+    - atrapar señales de procesos
+    - cachar_señales
+    - atrapar señales
+    - trap
+    - como usar trap
+    - coordinar procesos con señales
+
+
+- intent: scripts_remotos
+  examples: |
+    - scripts remotos
+    - como ejecuto un script remoto
+    - ejecutar script con ssh
+    - correr script con ssh
