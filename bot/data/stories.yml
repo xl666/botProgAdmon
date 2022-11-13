@@ -232,4 +232,9 @@ stories:
     - intent: scripts_remotos
     - action: utter_scripts_remotos_ayuda
     - action: utter_scripts_remotos_codigo
-    
+
+- story: expect
+  steps:
+    - intent: expect
+    - action: utter_expect_ayuda
+    - action: utter_expect_codigo

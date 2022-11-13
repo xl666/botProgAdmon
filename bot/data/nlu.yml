@@ -314,3 +314,11 @@ nlu:
     - como ejecuto un script remoto
     - ejecutar script con ssh
     - correr script con ssh
+
+- intent: expect
+  examples: |
+    - expect
+    - automatizar programas interactivos
+    - inyectar contraseñas ssh
+    - pasar entradas comando interactivo
+

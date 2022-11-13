@@ -36,6 +36,7 @@ intents:
   - comandos_procesos
   - cachar_señales
   - scripts_remotos
+  - expect
 
 responses:
   utter_greet:
@@ -476,7 +477,23 @@ responses:
   utter_scripts_remotos_codigo:
     - text: "code:bash:bash/remoto.sh"        
       
+
+  utter_expect_ayuda:
+    - text: |
+        - Sirve para automatizar programas interactivos simples
+        - Osea que requieren de entrada estándar varias veces
+        - Si es sólo una entrada mejor usar pipes (excepto en contraseñas)
+        - expect usa un lenguaje de scripting diferente a bash
+        - Pero se puede combinar fácilmente con scripts de bash
+        - Es probable que no tengas expect instalado por defecto
+        - Se puede usar para inyectar contraseñas de ssh
+        - El uso anterior se debe complementar con cifrado de contraseñas
+
+  utter_expect_codigo:
+    - text: "code:bash:bash/expect.sh"
+      
           
+      
   utter_temario:
   - text: |
       Estos son los temas con los que te puedo ayudar:
@@ -493,6 +510,7 @@ responses:
        - Encadenamiento
        - Expansión de sustitución de comando
        - Expansión de variables
+       - Expect
        - Expresiones regulares
        - Funciones
        - Funciones recursivas
