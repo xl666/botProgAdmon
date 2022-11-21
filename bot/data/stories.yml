@@ -238,3 +238,12 @@ stories:
     - intent: expect
     - action: utter_expect_ayuda
     - action: utter_expect_codigo
+
+- story: cifrado
+  steps:
+    - intent: cifrado
+    - action: utter_cifrado_ayuda1
+    - action: utter_cifrado_ayuda2
+    - action: utter_cifrado_codigo
+
+      

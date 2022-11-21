@@ -322,3 +322,15 @@ nlu:
     - inyectar contraseñas ssh
     - pasar entradas comando interactivo
 
+- intent: cifrado
+  examples: |
+    - cifrado
+    - ccrypt
+    - ccencrypt
+    - ccdecrypt
+    - encriptar archivo
+    - cifrar archivo
+    - desencriptar archivo
+    
+    
+

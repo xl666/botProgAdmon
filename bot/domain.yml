@@ -37,6 +37,7 @@ intents:
   - cachar_señales
   - scripts_remotos
   - expect
+  - cifrado
 
 responses:
   utter_greet:
@@ -492,6 +493,24 @@ responses:
   utter_expect_codigo:
     - text: "code:bash:bash/expect.sh"
       
+  utter_cifrado_ayuda1:
+    - text: |
+        - Se refiere a transformar los datos para que no sean legibles
+        - Si se cifra se puede más tarde descifrar mediante una llave
+        - No confundir con codificar ni con hashear
+        - El cifrado es útil para datos en tránsito y en reposo
+        - En este curso nos concentramos en datos en reposo
+        - El cifrado puede ser simétrico (una llave) o asimétrico (dos llaves)
+        - Para datos en reposo basta el cifrado simétrico
+
+  utter_cifrado_ayuda2:
+    - text: |
+        - En este curso se utiliza la herramienta ccrypt
+        - ccrypt es simple y tiene facilidades para scripting
+        - Posiblemente esté en los repositorios de tu distro
+
+  utter_cifrado_codigo:
+    - text: "code:bash:bash/cifrado.sh"
           
       
   utter_temario:
@@ -504,6 +523,7 @@ responses:
        - Comentario especial hash bang
        - Ciclo for
        - Ciclo while
+       - Cifrado
        - Comandos de testing
        - Comandos para procesos
        - Cron
