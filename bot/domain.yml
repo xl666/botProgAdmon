@@ -38,6 +38,8 @@ intents:
   - scripts_remotos
   - expect
   - cifrado
+  - leer_archivo
+  - gracias
 
 responses:
   utter_greet:
@@ -45,6 +47,14 @@ responses:
   - text: "Hola"
   - text: "Buen día"
   - text: "Buenas"
+
+
+
+  utter_gracias:
+  - text: "De nada"
+  - text: "Estoy para servir"
+  - text: "Necesito que me pagues, luego vemos..."
+  - text: "Me debes un favor"
 
 
   utter_goodbye:
@@ -511,7 +521,20 @@ responses:
 
   utter_cifrado_codigo:
     - text: "code:bash:bash/cifrado.sh"
-          
+
+
+  utter_leer_archivo_ayuda:
+    - text: |
+        - Para procesar un archivo línea por línea mediante un while
+        - Se utiliza el comando read que lee línea por línea de forma correcta
+        - Se combina también con redirección de entrada
+        - NO se debe usar for y cat para esto, los espacios se van a considerar como separadores
+
+  utter_leer_archivo_codigo:
+    - text: "code:bash:bash/leer_archivo.sh"
+
+  utter_leer_archivo_codigo_ejemplo:
+    - text: "code:bash:bash/leer_archivo_ejemplo.sh"
       
   utter_temario:
   - text: |
@@ -538,6 +561,7 @@ responses:
        - Globbing
        - If de bloque
        - If de línea
+       - Leer archivo línea por línea
        - Parámetros
        - Parámetros especiales
        - Parámetros variables

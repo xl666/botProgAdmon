@@ -332,5 +332,20 @@ nlu:
     - cifrar archivo
     - desencriptar archivo
     
-    
+- intent: leer_archivo
+  examples: |
+    - Leer archivo línea por línea
+    - Procesar archivo linea por linea
+    - while para leer archivo
+    - leer archivo
+    - procesar archivo
+    - ciclo para leer archivo
 
+- intent: gracias
+  examples: |
+    - gracias
+    - muchas gracias
+    - thanks
+    - thank you
+    - chido
+    - muy amable

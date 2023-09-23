@@ -246,4 +246,16 @@ stories:
     - action: utter_cifrado_ayuda2
     - action: utter_cifrado_codigo
 
-      
+- story: leer_archivo
+  steps:
+    - intent: leer_archivo
+    - action: utter_leer_archivo_ayuda
+    - action: utter_leer_archivo_codigo
+    - intent: ejemplo
+    - action: utter_leer_archivo_codigo_ejemplo
+
+
+- story: gracias
+  steps:
+    - intent: gracias
+    - action: utter_gracias    
